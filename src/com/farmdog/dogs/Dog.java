@@ -13,7 +13,7 @@ public class Dog {
         this.name = name;
         Dog.id++;
     }
-    
+
     public int getId() {
         return Dog.id;
     }
