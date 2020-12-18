@@ -11,4 +11,9 @@ public class OldDog extends Dog {
     public String getRation() {
         return "the ration for old dogs";
     }
+
+    @Override
+    public void startDayActivity() {
+        System.out.println(getName() + " goes to the aviary");
+    }
 }

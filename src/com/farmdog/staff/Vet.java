@@ -1,6 +1,7 @@
 package com.farmdog.staff;
 
 import com.farmdog.dogs.Dog;
+import java.util.Map;
 
 public class Vet extends Staff {
 
@@ -8,17 +9,25 @@ public class Vet extends Staff {
         super(name);
     }
 
-    public String checkHealth(Dog dog) {
-        if (dog.isInvalid()) {
-            return treat(dog);
-        }
+    public void checkHealth(Map<Integer, Dog> dogs) {
+        for (int key : dogs.keySet()) {
+            if (dogs.get(key).isInvalid()) {
 
-        return dog.getName() + " is absolutely healthy";
+                System.out.println(treat(dogs.get(key)));
+
+            } else {
+
+                System.out.println(dogs.get(key).getName() + " is absolutely healthy");
+
+            }
+        }
     }
 
     public String treat(Dog dog) {
+
         dog.setInvalid(false);
         return dog.getName() + " goes for a treatment";
+
     }
 
 }

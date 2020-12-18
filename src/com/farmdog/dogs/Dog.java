@@ -7,7 +7,6 @@ public class Dog {
     private boolean hungry;
     private boolean invalid;
     private boolean trained;
-    private boolean stayAtTheAviary;
     private String ration;
 
     public Dog(String name) {
@@ -21,14 +20,6 @@ public class Dog {
 
     public void setId(int id) {
         Dog.id = id;
-    }
-
-    public boolean isStayAtTheAviary() {
-        return stayAtTheAviary;
-    }
-
-    public void setStayAtTheAviary(boolean stayAtTheAviary) {
-        this.stayAtTheAviary = stayAtTheAviary;
     }
 
     public String getName() {
@@ -69,5 +60,8 @@ public class Dog {
 
     public void setRation(String ration) {
         this.ration = ration;
+    }
+
+    public void startDayActivity() {
     }
 }
